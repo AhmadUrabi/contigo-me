@@ -10,9 +10,9 @@ export default function CountriesLayout({
     children: React.ReactNode
   }) {
   return (
-    <div className="lg:w-3/4 xl:w-2/3 w-full mx-auto my-4">
-        <div className="bg-gray-100 p-6 shadow-xl rounded-lg">
-            <Image
+    <div className="lg:w-3/4 xl:w-2/3 w-full mx-auto lg:my-4 ease-in-out transition-all">
+        <div className="sm:bg-slate-50 bg-transparent p-6 shadow-2xl rounded-lg">
+            <a href="/countries"><Image
             alt="Contigo logo"
             src={Logo}
             width={400}
@@ -22,7 +22,8 @@ export default function CountriesLayout({
             height: 'auto',
             }}
         />
-        <hr className="my-4 h-[2px] bg-gray-900/50"/>
+        </a>
+        <hr className="my-4 h-0 border-1 border-gray-900/50"/>
             {children}
         </div>
     </div>

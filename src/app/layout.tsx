@@ -1,4 +1,6 @@
 import './globals.css'
+import { Inter } from '@next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
@@ -12,7 +14,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="w-screen h-screen">   
+      <body className={inter.className + " w-screen h-screen bg-gradient-to-tr from-slate-300 to-gray-300"}>   
           {children}
       </body>
     </html>
