@@ -1,7 +1,4 @@
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import JordanFull from '../../../../public/Jordan-Full.png'
-import WALogo from '../../../../public/jordan-logos/WALogo.png'
 import QatarFull from '../../../../public/Qatar-Full.png'
 import TalabatLogo from '../../../../public/qatar-logos/TalabatLogo.png'
 import SnoonuLogo from '../../../../public/qatar-logos/SnoonuLogo.png'
@@ -10,8 +7,9 @@ import MonoprixLogo from '../../../../public/qatar-logos/MonoprixLogo.png'
 import AlmeeraLogo from '../../../../public/qatar-logos/AlmeeraLogo.png'
 import MasskarLogo from '../../../../public/qatar-logos/MasskarLogo.png'
 import CarrefourQatarLogo from '../../../../public/qatar-logos/CarrefourLogo.png'
-import LuluLogo from '../../../../public/qatar-logos/LuluLogo.png'
+import LuluLogo from '../../../../public/qatar-logos/LuLuLogo.png'
 import SportsCornerLogo from '../../../../public/qatar-logos/SportsCornerLogo.png'
+
 
 const locationList = [
   {
@@ -44,10 +42,10 @@ const locationList = [
     name: 'Almeera',
     url: null,
     logo: AlmeeraLogo
-  }, 
+  },
   {
     name: 'Masskar',
-    url:  null,
+    url: null,
     logo: MasskarLogo
   },
   {
@@ -59,26 +57,17 @@ const locationList = [
     name: 'Sports Corner',
     url: null,
     logo: SportsCornerLogo
-  }  
+  }
 ]
 
 export default function Qatar() {
   return (
     <div>
       <div className="w-full bg-white shadow-lg rounded-md flex flex-col sm:flex-row justify-evenly items-center p-2 mb-4">
-      <div className="text-center">
-        <Image
-          alt="Qatar flag"
-          src={QatarFull}
-          height={100}
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-          }}
-          className="my-4"
-        />
-      </div>
-      <h1 className="text-xl">Where to find us in Qatar</h1>
+        <a href="/countries">
+          <h1>&lt; Back to Countries</h1>
+          </a>
+        <h1 className="text-xl">Where to find us in Qatar</h1>
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max'>
 
@@ -96,16 +85,16 @@ export default function Qatar() {
                 }}
                 className="mx-auto lg:mx-0 mb-4" />
               <h1 className="text-xl">{location.name}</h1>
-              
-              </div>
-              {location.url != null ? 
-              <a className="w-full" href={location.url}><button className="w-full shadow-md md:w-[80%] p-4 bg-gray-900 md:rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg hover:bg-gray-800 ">Shop Online</button></a> : 
+
+            </div>
+            {location.url != null ?
+              <a className="w-full" href={location.url}><button className="w-full shadow-md md:w-[80%] p-4 bg-gray-900 md:rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg hover:bg-gray-800 ">Shop Online</button></a> :
               <a className="w-full"><button className="w-full md:w-[80%] p-4 bg-white md:rounded-md md:mb-4 md:mx-4 mt-2 text-white"></button></a>}
           </div>
         ))}
       </div>
 
     </div>
-    
+
   )
 }
