@@ -71,8 +71,8 @@ export default function Qatar() {
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max'>
 
-        {locationList.map((location) => (
-          <div className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip hover:shadow-2xl hover:-translate-y-0.5 hover:scale-[1.01] transition-all ease-in-out">
+        {locationList.map((location,index) => (
+          <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip hover:shadow-2xl hover:-translate-y-0.5 hover:scale-[1.01] transition-all ease-in-out">
             <div className="py-4">
               <Image
                 alt={location.name}

@@ -20,8 +20,8 @@ export default function countries() {
       <h1>To find your nearest Contigo Retailer, select your country:</h1>
 
       <div className="w-full flex justify-around align-center flex-wrap py-9">
-        {countryList.map((country) => (
-            <div><a href={country.url}>
+        {countryList.map((country, index) => (
+            <div key={index}><a href={country.url}>
                 <div className="text-center">
                     <Image
                     alt={country.name + " flag"}

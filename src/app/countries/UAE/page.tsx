@@ -58,8 +58,8 @@ export default function UAE() {
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max'>
 
-        {locationList.map((location) => (
-          <div className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip">
+        {locationList.map((location, index) => (
+          <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip">
             <div className="py-4">
               <Image
                 alt={location.name}
