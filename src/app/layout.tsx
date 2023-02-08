@@ -14,7 +14,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={inter.className + " w-screen h-screen bg-gradient-to-tr from-slate-300 to-gray-300"}>   
+      <body className={inter.className + " w-screen h-screen bg-gradient-to-tr from-slate-400 to-gray-300"}>   
           {children}
       </body>
     </html>

@@ -17,12 +17,12 @@ const countryList = [
 export default function countries() {
   return (
     <main>
-      <h1>To find your nearest Contigo Retailer, select your country:</h1>
+      <h1 className="text-center text-2xl font-medium text-[#231f20]">To find your nearest Contigo Retailer, select your country:</h1>
 
       <div className="w-full flex justify-around align-center flex-wrap py-9">
         {countryList.map((country, index) => (
-            <div key={index}><a href={country.url}>
-                <div className="text-center">
+            <a href={country.url} className="w-full md:w-auto"><div key={index} className="p-4 bg-white rounded-xl mx-3  my-2 hover:-translate-y-2 hover:shadow-xl shadow-md transition-all ease-in-out">
+                <div className="text-center flex flex-row justify-between items-center md:flex-col">
                     <Image
                     alt={country.name + " flag"}
                     src={country.flag}
@@ -32,12 +32,15 @@ export default function countries() {
                     maxWidth: '100%',
                     height: 'auto',
                     }}
-                    className="rounded-full m-4"
+                    className="rounded-full w-1/4 md:w-[80%] md:mb-4"
                     />
-                    <h1>{country.name}</h1>
+                    <div className="w-full text-center">
+                      <h1 className="text-2xl text-[#231f20]">{country.name}</h1>
+                    </div>
                 </div>
-            </a>
+            
             </div>
+            </a>
         ))}
       </div>
     </main>

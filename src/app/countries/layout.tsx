@@ -5,28 +5,30 @@ import Logo from '../../../public/Contigo-Logo.png'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function CountriesLayout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <div className="lg:w-3/4 xl:w-2/3 w-full mx-auto lg:my-4 ease-in-out transition-all">
-        <div className="sm:bg-slate-50 bg-transparent p-6 shadow-2xl rounded-lg">
-            <a href="/countries"><Image
+      <div className="lg:bg-gradient-to-tr lg:from-gray-200 lg:to-gray-50 bg-transparent /*p-6*/ shadow-2xl rounded-lg">
+        <div className="flex justify-between items-center p-6">
+          <a href="/countries"><Image
             alt="Contigo logo"
             src={Logo}
             width={400}
             height={400}
             style={{
-            maxWidth: '100%',
-            height: 'auto',
+              maxWidth: '100%',
+              height: 'auto',
             }}
-        />
-        </a>
-        <hr className="my-4 h-0 border-1 border-gray-900/50"/>
-            {children}
+          />
+          </a>
+          <a className="w-full justify-end hidden md:flex" href="https://www.jh.com.jo"><button className="shadow-md md:w-1/3 p-4 bg-[#231f20] rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg hover:bg-zinc-600 transition-all ease-in-out">Contact Us</button></a>
         </div>
+        {children}
+      </div>
     </div>
-      
+
   )
 }
