@@ -7,11 +7,12 @@ import KuwaitFlag from '../../public/Kuwait.png'
 import UAEFlag from '../../public/UAE.png'
 
 const countryList = [
-    { name: 'Jordan', flag: JordanFlag, url: '/Jordan' },
-    { name: 'Qatar', flag: QatarFlag, url: '/Qatar' },
-    { name: 'Saudi Arabia', flag: SaudiFlag, url: '/Saudi' },
-    { name: 'Kuwait', flag: KuwaitFlag, url: '/Kuwait' },
-    { name: 'UAE', flag: UAEFlag, url: '/UAE' },
+  { name: 'Jordan', flag: JordanFlag, url: '/Jordan', hidden: false },
+  { name: 'UAE', flag: UAEFlag, url: '/UAE', hidden: false },
+  { name: 'Qatar', flag: QatarFlag, url: '/Qatar', hidden: false },
+  { name: 'Saudi Arabia', flag: SaudiFlag, url: '/Saudi', hidden: false },
+  { name: 'Kuwait', flag: KuwaitFlag, url: '/Kuwait', hidden: true },
+
 ]
 
 export default function countries() {
@@ -21,25 +22,25 @@ export default function countries() {
 
       <div className="w-full flex justify-around align-center flex-wrap py-9">
         {countryList.map((country, index) => (
-            <a key={index} href={country.url} className="w-full md:w-auto"><div className="p-4 bg-white rounded-xl mx-3  my-2 hover:-translate-y-2 hover:shadow-xl shadow-md transition-all ease-in-out">
-                <div className="text-center flex flex-row justify-between items-center md:block">
-                    <Image
-                    alt={country.name + " flag"}
-                    src={country.flag}
-                    width={100}
-                    height={100}
-                    style={{
+          <a key={index} href={country.hidden ? "" : country.url} className={country.hidden ? "pointer-events-none cursor-default" : "w-full md:w-auto"}>
+            <div className="p-4 bg-white rounded-xl mx-3  my-2 shadow-md hover:-translate-y-2 hover:shadow-xl transition-all ease-in-out">
+              <div className="text-center flex flex-row justify-between items-center md:block whitespace-normal">
+                <Image
+                  alt={country.name + " flag"}
+                  src={country.flag}
+                  width={100}
+                  height={100}
+                  style={{
                     maxWidth: '100%',
-                    }}
-                    className="rounded-full md:mx-auto w-1/4 md:w-[80%] md:mb-4"
-                    />
-                    <div className="w-full text-center">
-                      <h1 className="text-xl text-[#231f20]">{country.name}</h1>
-                    </div>
+                  }}
+                  className="rounded-full md:mx-auto w-1/4 md:w-[80%] md:mb-4"
+                />
+                <div className="w-full text-center">
+                  <h1 className="text-xl text-[#231f20]">{country.name}</h1>
                 </div>
-            
+              </div>
             </div>
-            </a>
+          </a>
         ))}
       </div>
     </main>
