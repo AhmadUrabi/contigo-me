@@ -20,9 +20,9 @@ export default function countries() {
     <main>
       <h1 className="text-center text-2xl font-medium text-[#231f20]">To find your nearest Contigo Retailer, select your country:</h1>
 
-      <div className="w-full flex justify-around align-center flex-wrap py-9">
+      <div className="w-full flex justify-evenly align-center flex-wrap py-9">
         {countryList.map((country, index) => (
-          <a key={index} href={country.hidden ? "" : country.url} className={country.hidden ? "pointer-events-none cursor-default" : "w-full md:w-auto"}>
+          <a key={index} href={country.hidden ? "" : country.url} className={country.hidden ? "w-full md:w-auto pointer-events-none cursor-default" : "w-full md:w-auto"}>
             <div className="p-4 bg-white rounded-xl mx-3  my-2 shadow-md hover:-translate-y-2 hover:shadow-xl transition-all ease-in-out">
               <div className="text-center flex flex-row justify-between items-center md:block whitespace-normal">
                 <Image

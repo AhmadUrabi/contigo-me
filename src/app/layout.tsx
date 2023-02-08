@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google'
 import Logo from '../../public/Contigo-Logo.png'
 import './globals.css'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function CountriesLayout({
@@ -10,6 +11,7 @@ export default function CountriesLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       {/*

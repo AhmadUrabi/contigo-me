@@ -31,7 +31,7 @@ const locationList = [
   },
   {
     name: 'Dumyah',
-    url: 'https://www.carrefouruae.com/mafuae/en/c/MKP-Contigo',
+    url: 'https://www.dumyah.com/en/contigo',
     logo: DumyaLogo
   },
   {
