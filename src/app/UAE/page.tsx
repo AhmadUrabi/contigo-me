@@ -1,80 +1,57 @@
 import Image from 'next/image'
-import QatarFull from '../../../../public/Qatar-Full.png'
-import TalabatLogo from '../../../../public/qatar-logos/TalabatLogo.png'
-import SnoonuLogo from '../../../../public/qatar-logos/SnoonuLogo.png'
-import LzhibaLogo from '../../../../public/qatar-logos/LzhbaLogo.png'
-import MonoprixLogo from '../../../../public/qatar-logos/MonoprixLogo.png'
-import AlmeeraLogo from '../../../../public/qatar-logos/AlmeeraLogo.png'
-import MasskarLogo from '../../../../public/qatar-logos/MasskarLogo.png'
-import CarrefourQatarLogo from '../../../../public/qatar-logos/CarrefourLogo.png'
-import LuluLogo from '../../../../public/qatar-logos/LuLuLogo.png'
-import SportsCornerLogo from '../../../../public/qatar-logos/SportsCornerLogo.png'
+import { Inter } from '@next/font/google'
+import UAEFull from '../../../public/UAE-Full.png'
+import AmazonLogo from '../../../public/uae-logos/AmazonLogo.png'
+import FirstcryLogo from '../../../public/uae-logos/FirstCryLogo.png'
+import CarrefourLogo from '../../../public/uae-logos/CarrefourLogo.png'
+import SimplyKitchenLogo from '../../../public/uae-logos/SimplyKitchen.png'
+import AlmakaanLogo from '../../../public/uae-logos/AlmakaanLogo.png'
 
+const inter = Inter({ subsets: ['latin'] })
 
 const locationList = [
   {
-    name: 'Talabat Qatar',
-    url: 'https://www.talabat.com/qatar/grocery/619614/talabat-mart?aid=1634',
-    logo: TalabatLogo
+    name: 'Almakaan Store',
+    url: 'https://almakaanstore.com/',
+    logo: AlmakaanLogo
   },
   {
-    name: 'Snoonu',
-    url: 'https://snoonu.com/search?q=Contigo',
-    logo: SnoonuLogo
+    name: 'Amazon UAE',
+    url: 'https://www.amazon.ae/s?k=Contigo',
+    logo: AmazonLogo
   },
   {
-    name: 'Lzhiba',
-    url: 'https://www.lzhiba.qa/product-brands/contigo/',
-    logo: LzhibaLogo
-  }
-  ,
-  {
-    name: 'Carrefour Qatar',
-    url: 'https://www.carrefourqatar.com/mafqat/en/v4/search?keyword=Contigo',
-    logo: CarrefourQatarLogo
+    name: 'Firstcry',
+    url: 'https://www.firstcry.ae/contigo/0/0/1002586',
+    logo: FirstcryLogo
   },
   {
-    name: 'Monoprix',
-    url: null,
-    logo: MonoprixLogo
+    name: 'Carrefour UAE',
+    url: 'https://www.carrefouruae.com/mafuae/en/c/MKP-Contigo',
+    logo: CarrefourLogo
   },
   {
-    name: 'Almeera',
-    url: null,
-    logo: AlmeeraLogo
+    name: 'Simply Kitchen',
+    url: 'https://www.liwastores.com/simply-kitchen/',
+    logo: SimplyKitchenLogo
   },
-  {
-    name: 'Masskar',
-    url: null,
-    logo: MasskarLogo
-  },
-  {
-    name: 'Lulu Hypermarket',
-    url: null,
-    logo: LuluLogo
-  },
-  {
-    name: 'Sports Corner',
-    url: null,
-    logo: SportsCornerLogo
-  }
 ]
 
-export default function Qatar() {
+export default function UAE() {
   return (
     <div>
       <div className="w-full bg-white h-24 bg-no-repeat shadow-xl md:shadow-lg md:rounded-md scale-[1.015] flex flex-row justify-between overflow-clip pr-4 items-center mb-4">
-        <a className="sm:w-[15%] w-[30%] h-full" href="/countries"><div className="bg-[#231f20] h-full flex justify-center items-center">
+        <a className="sm:w-[15%] w-[30%] h-full" href="/"><div className="bg-[#231f20] h-full flex justify-center items-center">
           <svg aria-hidden="true" className="w-1/3 h-1/3 ml-2 -mr-1 rotate-180" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </div>
         </a>
         <div className="w-full justify-center items-center flex">
-          <h1 className="text-2xl">Qatar Retailers</h1>
+          <h1 className="text-2xl">UAE Retailers</h1>
         </div>
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-6 pb-6'>
 
-        {locationList.map((location,index) => (
+        {locationList.map((location, index) => (
           <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip hover:shadow-2xl hover:-translate-y-0.5 hover:scale-[1.01] transition-all ease-in-out">
             <div className="py-4">
               <Image
@@ -98,6 +75,5 @@ export default function Qatar() {
       </div>
 
     </div>
-
   )
 }

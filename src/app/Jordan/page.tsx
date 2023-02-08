@@ -1,17 +1,17 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import JordanFull from '../../../../public/Jordan-Full.png'
-import WALogo from '../../../../public/jordan-logos/WALogo.png'
-import DNALogo from '../../../../public/jordan-logos/DNALogo.png'
-import TheOutfitLogo from '../../../../public/jordan-logos/TheOutFitLogo.png'
-import DumyaLogo from '../../../../public/jordan-logos/DumyahLogo.png'
-import AbdeenLogo from '../../../../public/jordan-logos/AbdeenLogo.png'
-import CarrefourJordanLogo from '../../../../public/jordan-logos/CarrefourLogo.png'
-import MilesLogo from '../../../../public/jordan-logos/MilesLogo.png'
-import SolesLogo from '../../../../public/jordan-logos/SolesLogo.png'
-import SamirLogo from '../../../../public/jordan-logos/SamirLogo.png'
-import CozmoLogo from '../../../../public/jordan-logos/CozmoLogo.png'
-import IrfanLogo from '../../../../public/jordan-logos/IrfanLogo.png'
+import JordanFull from '../../../public/Jordan-Full.png'
+import WALogo from '../../../public/jordan-logos/WALogo.png'
+import DNALogo from '../../../public/jordan-logos/DNALogo.png'
+import TheOutfitLogo from '../../../public/jordan-logos/TheOutFitLogo.png'
+import DumyaLogo from '../../../public/jordan-logos/DumyahLogo.png'
+import AbdeenLogo from '../../../public/jordan-logos/AbdeenLogo.png'
+import CarrefourJordanLogo from '../../../public/jordan-logos/CarrefourLogo.png'
+import MilesLogo from '../../../public/jordan-logos/MilesLogo.png'
+import SolesLogo from '../../../public/jordan-logos/SolesLogo.png'
+import SamirLogo from '../../../public/jordan-logos/SamirLogo.png'
+import CozmoLogo from '../../../public/jordan-logos/CozmoLogo.png'
+import IrfanLogo from '../../../public/jordan-logos/IrfanLogo.png'
 
 const locationList = [
   {
@@ -76,7 +76,7 @@ export default function Jordan() {
   return (
     <div>
       <div className="w-full bg-white h-24 bg-no-repeat shadow-xl md:shadow-lg md:rounded-md scale-[1.015] flex flex-row justify-between overflow-clip pr-4 items-center mb-4">
-        <a className="sm:w-[15%] w-[30%] h-full" href="/countries"><div className="bg-[#231f20] h-full flex justify-center items-center">
+        <a className="sm:w-[15%] w-[30%] h-full" href="/"><div className="bg-[#231f20] h-full flex justify-center items-center">
           <svg aria-hidden="true" className="w-1/3 h-1/3 ml-2 -mr-1 rotate-180" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </div>
         </a>
