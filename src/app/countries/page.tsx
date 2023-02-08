@@ -21,7 +21,7 @@ export default function countries() {
 
       <div className="w-full flex justify-around align-center flex-wrap py-9">
         {countryList.map((country, index) => (
-            <a href={country.url} className="w-full md:w-auto"><div key={index} className="p-4 bg-white rounded-xl mx-3  my-2 hover:-translate-y-2 hover:shadow-xl shadow-md transition-all ease-in-out">
+            <a key={index} href={country.url} className="w-full md:w-auto"><div  className="p-4 bg-white rounded-xl mx-3  my-2 hover:-translate-y-2 hover:shadow-xl shadow-md transition-all ease-in-out">
                 <div className="text-center flex flex-row justify-between items-center md:flex-col">
                     <Image
                     alt={country.name + " flag"}
