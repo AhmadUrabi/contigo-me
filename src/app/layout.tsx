@@ -17,11 +17,10 @@ export default function CountriesLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={inter.className + " w-screen h-screen bg-gradient-to-tr from-slate-400 to-gray-300"}>
-
+      <body className={inter.className + "w-screen h-screen bg-gradient-to-tr from-slate-400 to-gray-300"}>
         <div className="lg:w-3/4 xl:w-2/3 w-full mx-auto lg:my-4 ease-in-out transition-all">
-          <div className="lg:bg-gradient-to-tr lg:from-gray-200 lg:to-gray-50 bg-transparent /*p-6*/ shadow-2xl rounded-lg">
-            <div className="flex justify-between items-center p-6">
+          <div className="md:bg-gradient-to-tr md:from-gray-200 md:to-gray-50 bg-transparent /*p-6*/ shadow-2xl rounded-lg">
+            <div className="flex justify-center md:justify-between items-center p-6">
               <a href="/"><Image
                 alt="Contigo logo"
                 src={Logo}
