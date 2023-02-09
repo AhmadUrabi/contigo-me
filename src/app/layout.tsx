@@ -35,7 +35,7 @@ export default function CountriesLayout({
                 }}
               />
               </a>
-              <a className="w-full justify-end hidden md:flex" href="https://www.jh.com.jo"><button className="shadow-md md:w-1/3 p-4 bg-[#231f20] rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg betterhover:bg-zinc-600 transition-all ease-in-out">Contact Us</button></a>
+              <a className="w-full justify-end hidden md:flex" href="https://www.jh.com.jo" rel="noreferrer" target="_blank"><button className="shadow-md md:w-1/3 p-4 bg-[#231f20] rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg betterhover:bg-zinc-600 transition-all ease-in-out">Contact Us</button></a>
             </div>
             {children}
             <div className="flex flex-col-reverse md:flex-row justify-start md:justify-between items-start md:items-center bg-white rounded-xl md:m-4 mx-4 mb-4">
@@ -46,15 +46,15 @@ export default function CountriesLayout({
                 <h3>29 Habbar Bin Al-Aswad St.</h3>
                 <h3>P.O. Box 7666 Amman 11110 Jordan</h3>
                 <h3>(+962) 6 420 5050</h3>
-                <a href="https://www.jh.com.jo" target="_blank"><h3>info@jh.com.jo</h3></a>
+                <a href="https://www.jh.com.jo" target="_blank" rel="noreferrer"><h3>info@jh.com.jo</h3></a>
               </div>
               <div className="w-max flex p-6 md:m-4 flex-col justify-start">
                 <h1 className="text-xl">Follow Contigo</h1>
-                <a className="flex items-center my-1" href="https://www.instagram.com/contigomiddleeast"><Image src={instagram} width={25} alt="Instagram Icon" className="inline-block" style={{
+                <a className="flex items-center my-1" href="https://www.instagram.com/contigomiddleeast" rel="noreferrer"><Image src={instagram} width={25} alt="Instagram Icon" className="inline-block" style={{
                   maxWidth: '100%',
                   height: 'auto',
                 }}/>Instagram</a>
-                <a className="flex items-center my-1" href="https://www.instagram.com/contigomiddleeast"><Image src={tiktok} width={25} alt="Instagram Icon" className="inline-block" style={{
+                <a className="flex items-center my-1" href="https://www.instagram.com/contigomiddleeast" rel="noreferrer"><Image src={tiktok} width={25} alt="Instagram Icon" className="inline-block" style={{
                   maxWidth: '100%',
                   height: 'auto',
                 }}/>Tiktok</a>
