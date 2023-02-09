@@ -35,7 +35,7 @@ export default function CountriesLayout({
                 }}
               />
               </a>
-              <a className="w-full justify-end hidden md:flex" href="https://www.jh.com.jo" rel="noreferrer" target="_blank"><button className="shadow-md md:w-1/3 p-4 bg-[#231f20] rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg betterhover:bg-zinc-600 transition-all ease-in-out">Contact Us</button></a>
+              <a className="w-full justify-end hidden md:flex" href="https://www.jh.com.jo" rel="noreferrer" target="_blank"><button className="shadow-md md:w-1/3 p-4 bg-[#231f20] rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg md:hover:bg-zinc-600 transition-all ease-in-out">Contact Us</button></a>
             </div>
             {children}
             <div className="flex flex-col-reverse md:flex-row justify-start md:justify-between items-start md:items-center bg-white rounded-xl md:m-4 mx-4 mb-4">
