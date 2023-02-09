@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google'
+import Link from 'next/link'
 import Image from 'next/image'
 import JordanFlag from '../../public/jordan.png'
 import QatarFlag from '../../public/qatar.png'
@@ -22,8 +22,8 @@ export default function countries() {
 
       <div className="w-full flex justify-evenly align-center flex-wrap py-9">
         {countryList.map((country, index) => (
-          <a key={index} href={country.hidden ? "" : country.url} className={country.hidden ? "w-full md:w-auto pointer-events-none cursor-default" : "w-full md:w-auto"}>
-            <div className="p-4 bg-white rounded-xl mx-3  my-2 shadow-md md:hover:-translate-y-2 md:hover:shadow-xl transition-all ease-in-out">
+          <Link prefetch href={country.hidden ? "" : country.url} key={index}>
+            <div className={country.hidden ? "w-full md:w-auto pointer-events-none cursor-default p-4 bg-white rounded-xl mx-3  my-2 shadow-md md:hover:-translate-y-2 md:hover:shadow-xl transition-all ease-in-out" : "w-full md:w-auto p-4 bg-white rounded-xl mx-3  my-2 shadow-md md:hover:-translate-y-2 md:hover:shadow-xl transition-all ease-in-out"}>
               <div className="text-center flex flex-row justify-between items-center md:block whitespace-normal">
                 <Image
                   alt={country.name + " flag"}
@@ -40,7 +40,7 @@ export default function countries() {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </main>
