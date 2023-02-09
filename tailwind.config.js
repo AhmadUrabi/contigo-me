@@ -10,9 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-      
-      }
+      screens: {
+        'betterhover': {'raw': '(hover: hover)'},
+    }
     },
   },
   plugins: [],

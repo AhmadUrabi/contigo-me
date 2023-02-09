@@ -75,7 +75,7 @@ export default function Qatar() {
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-6 pb-6'>
 
         {locationList.map((location,index) => (
-          <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip hover:shadow-2xl hover:-translate-y-0.5 hover:scale-[1.01] transition-all ease-in-out">
+          <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip betterhover:shadow-2xl betterhover:-translate-y-0.5 betterhover:scale-[1.01] transition-all ease-in-out">
             <div className="py-4">
               <Image
                 alt={location.name}
@@ -91,7 +91,7 @@ export default function Qatar() {
 
             </div>
             {location.url != null ?
-              <a className="w-full" href={location.url}><button className="w-full shadow-md md:w-[80%] p-4 bg-[#231f20] md:rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg hover:bg-zinc-600 transition-all ease-in-out">Shop Online</button></a> :
+              <a className="w-full" href={location.url}><button className="w-full shadow-md md:w-[80%] p-4 bg-[#231f20] md:rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg betterhover:bg-zinc-600 transition-all ease-in-out">Shop Online</button></a> :
               <a className="w-full"><button className="w-full md:w-[80%] p-4 bg-white md:rounded-md md:mb-4 md:mx-4 mt-2 text-white"></button></a>}
           </div>
         ))}
