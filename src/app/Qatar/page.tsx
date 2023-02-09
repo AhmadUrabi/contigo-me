@@ -72,7 +72,7 @@ export default function Qatar() {
           <h1 className="text-2xl">Qatar Retailers</h1>
         </div>
       </div>
-      <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-6 pb-6'>
+      <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-4 pb-6'>
 
         {locationList.map((location,index) => (
           <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip md:hover:shadow-2xl md:hover:-translate-y-0.5 md:hover:scale-[1.01] transition-all ease-in-out">
