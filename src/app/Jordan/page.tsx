@@ -13,6 +13,8 @@ import SamirLogo from '../../../public/jordan-logos/SamirLogo.png'
 import CozmoLogo from '../../../public/jordan-logos/CozmoLogo.png'
 import IrfanLogo from '../../../public/jordan-logos/IrfanLogo.png'
 
+
+
 const locationList = [
   {
     name: 'Whole and All',
@@ -71,6 +73,9 @@ const locationList = [
   },
 
 ]
+export const metadata = {
+  title: "Jordan",
+}
 
 export default function Jordan() {
   return (

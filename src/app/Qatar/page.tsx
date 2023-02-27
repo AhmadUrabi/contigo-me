@@ -60,6 +60,11 @@ const locationList = [
   }
 ]
 
+export const metadata = {
+  title: "Qatar",
+}
+
+
 export default function Qatar() {
   return (
     <div>

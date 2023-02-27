@@ -7,6 +7,7 @@ import CarrefourLogo from '../../../public/uae-logos/CarrefourLogo.png'
 import SimplyKitchenLogo from '../../../public/uae-logos/SimplyKitchen.png'
 import AlmakaanLogo from '../../../public/uae-logos/AlmakaanLogo.png'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 const locationList = [
@@ -36,6 +37,11 @@ const locationList = [
     logo: SimplyKitchenLogo
   },
 ]
+
+export const metadata = {
+  title: "UAE",
+}
+
 
 export default function UAE() {
   return (

@@ -5,6 +5,54 @@ import instagram from '../../public/instagram.svg'
 import tiktok from '../../public/tiktok.svg'
 import './globals.css'
 
+import type { Metadata } from 'next';
+import Script from 'next/script'
+
+//export const metadata: Metadata = {
+//  title: 'Contigo Middle East',
+//  description: 'Contigo Middle East Official Website',
+//};
+
+export const metadata = {
+  title: {
+    default: 'Contigo Middle East',
+    template: '%s | Contigo Middle East',
+  },
+  description: 'Contigo Middle East Official Website',
+  openGraph: {
+    title: 'Contigo Middle East',
+    description: 'Contigo Middle East Official Website',
+    url: 'https://www.contigome.com',
+    siteName: 'ContigoME',
+    images: [
+      {
+        url: "https://www.contigome.com/Contigo-Logo.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en-US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  
+}
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function CountriesLayout({
@@ -21,6 +69,21 @@ export default function CountriesLayout({
       */}
       <head />
       <body className={inter.className + "w-screen h-screen bg-gradient-to-tr from-slate-400 to-gray-300 "}>
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-R8GD2D2JL6"/>
+        <Script
+        id='google-analytics'
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G-R8GD2D2JL6', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+      />
         <div className="lg:w-3/4 xl:w-2/3 w-full mx-auto lg:my-4 ease-in-out transition-all mb-16 md:mb-0 pb-4">
           <div className="md:bg-gradient-to-tr md:from-gray-200 md:to-gray-50 bg-transparent /*p-6*/ shadow-2xl rounded-lg md:pb-4">
             <div className="flex justify-center md:justify-between items-center p-6">
