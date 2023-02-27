@@ -4,6 +4,8 @@ import Logo from '../../public/Contigo-Logo.png'
 import instagram from '../../public/instagram.svg'
 import tiktok from '../../public/tiktok.svg'
 import './globals.css'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,7 +39,9 @@ export default function CountriesLayout({
               </a>
               <a className="w-full justify-end hidden md:flex" href="https://www.jh.com.jo/contact-us/" rel="noreferrer" target="_blank"><button className="shadow-md md:w-1/3 p-4 bg-[#231f20] rounded-md md:mb-4 md:mx-4 mt-2 text-gray-100 text-lg md:hover:bg-zinc-600 transition-all ease-in-out">Become a Distributor</button></a>
             </div>
+            <Suspense fallback={<Loading />}>
             {children}
+            </Suspense>
             <div className="flex flex-col-reverse md:flex-row justify-start md:justify-between items-start md:items-center shadow-md bg-white rounded-xl mx-4 mb-4">
               <div className="w-full p-6 md:m-4">
                 <h1 className="text-lg md:text-xl">Official Middle East Distributor</h1>
