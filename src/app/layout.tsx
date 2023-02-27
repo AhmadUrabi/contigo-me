@@ -87,11 +87,13 @@ export default function CountriesLayout({
         <div className="lg:w-3/4 xl:w-2/3 w-full mx-auto lg:my-4 ease-in-out transition-all mb-16 md:mb-0 pb-4">
           <div className="md:bg-gradient-to-tr md:from-gray-200 md:to-gray-50 bg-transparent /*p-6*/ shadow-2xl rounded-lg md:pb-4">
             <div className="flex justify-center md:justify-between items-center p-6">
-              <a href="/"><Image
+              <a href="/">
+                <Image
                 alt="Contigo logo"
                 src={Logo}
                 width={400}
                 height={400}
+                priority
                 style={{
                   maxWidth: '100%',
                   height: 'auto',
