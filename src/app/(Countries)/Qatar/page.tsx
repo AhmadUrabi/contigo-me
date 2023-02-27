@@ -1,49 +1,71 @@
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import UAEFull from '../../../public/UAE-Full.png'
-import AmazonLogo from '../../../public/uae-logos/AmazonLogo.png'
-import FirstcryLogo from '../../../public/uae-logos/FirstCryLogo.png'
-import CarrefourLogo from '../../../public/uae-logos/CarrefourLogo.png'
-import SimplyKitchenLogo from '../../../public/uae-logos/SimplyKitchen.png'
-import AlmakaanLogo from '../../../public/uae-logos/AlmakaanLogo.png'
+import QatarFull from '../../../../public/Qatar-Full.png'
+import TalabatLogo from '../../../../public/qatar-logos/TalabatLogo.png'
+import SnoonuLogo from '../../../../public/qatar-logos/SnoonuLogo.png'
+import LzhibaLogo from '../../../../public/qatar-logos/LzhbaLogo.png'
+import MonoprixLogo from '../../../../public/qatar-logos/MonoprixLogo.png'
+import AlmeeraLogo from '../../../../public/qatar-logos/AlmeeraLogo.png'
+import MasskarLogo from '../../../../public/qatar-logos/MasskarLogo.png'
+import CarrefourQatarLogo from '../../../../public/qatar-logos/CarrefourLogo.png'
+import LuluLogo from '../../../../public/qatar-logos/LuLuLogo.png'
+import SportsCornerLogo from '../../../../public/qatar-logos/SportsCornerLogo.png'
 
-
-const inter = Inter({ subsets: ['latin'] })
 
 const locationList = [
   {
-    name: 'Almakaan Store',
-    url: 'https://almakaanstore.com/',
-    logo: AlmakaanLogo
+    name: 'Talabat Qatar',
+    url: 'https://www.talabat.com/qatar/grocery/619614/talabat-mart?aid=1634',
+    logo: TalabatLogo
   },
   {
-    name: 'Amazon UAE',
-    url: 'https://www.amazon.ae/s?k=Contigo',
-    logo: AmazonLogo
+    name: 'Snoonu',
+    url: 'https://snoonu.com/search?q=Contigo',
+    logo: SnoonuLogo
   },
   {
-    name: 'Firstcry',
-    url: 'https://www.firstcry.ae/contigo/0/0/1002586',
-    logo: FirstcryLogo
+    name: 'Lzhiba',
+    url: 'https://www.lzhiba.qa/product-brands/contigo/',
+    logo: LzhibaLogo
+  }
+  ,
+  {
+    name: 'Carrefour Qatar',
+    url: 'https://www.carrefourqatar.com/mafqat/en/v4/search?keyword=Contigo',
+    logo: CarrefourQatarLogo
   },
   {
-    name: 'Carrefour UAE',
-    url: 'https://www.carrefouruae.com/mafuae/en/c/MKP-Contigo',
-    logo: CarrefourLogo
+    name: 'Monoprix',
+    url: null,
+    logo: MonoprixLogo
   },
   {
-    name: 'Simply Kitchen',
-    url: 'https://www.liwastores.com/simply-kitchen/',
-    logo: SimplyKitchenLogo
+    name: 'Almeera',
+    url: null,
+    logo: AlmeeraLogo
   },
+  {
+    name: 'Masskar',
+    url: null,
+    logo: MasskarLogo
+  },
+  {
+    name: 'Lulu Hypermarket',
+    url: null,
+    logo: LuluLogo
+  },
+  {
+    name: 'Sports Corner',
+    url: null,
+    logo: SportsCornerLogo
+  }
 ]
 
 export const metadata = {
-  title: "UAE",
+  title: "Qatar",
 }
 
 
-export default function UAE() {
+export default function Qatar() {
   return (
     <div>
       <div className="w-full bg-white h-24 bg-no-repeat shadow-xl md:shadow-lg md:rounded-md scale-[1.015] flex flex-row justify-between overflow-clip pr-4 items-center mb-4">
@@ -52,12 +74,12 @@ export default function UAE() {
         </div>
         </a>
         <div className="w-full justify-center items-center flex">
-          <h1 className="text-2xl">UAE Retailers</h1>
+          <h1 className="text-2xl">Qatar Retailers</h1>
         </div>
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-4 pb-6'>
 
-        {locationList.map((location, index) => (
+        {locationList.map((location,index) => (
           <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip md:hover:shadow-2xl md:hover:-translate-y-0.5 md:hover:scale-[1.01] transition-all ease-in-out">
             <div className="py-4">
               <Image
@@ -81,5 +103,6 @@ export default function UAE() {
       </div>
 
     </div>
+
   )
 }

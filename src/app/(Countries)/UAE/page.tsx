@@ -1,83 +1,49 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import JordanFull from '../../../public/Jordan-Full.png'
-import WALogo from '../../../public/jordan-logos/WALogo.png'
-import DNALogo from '../../../public/jordan-logos/DNALogo.png'
-import TheOutfitLogo from '../../../public/jordan-logos/TheOutFitLogo.png'
-import DumyaLogo from '../../../public/jordan-logos/DumyahLogo.png'
-import AbdeenLogo from '../../../public/jordan-logos/AbdeenLogo.png'
-import CarrefourJordanLogo from '../../../public/jordan-logos/CarrefourLogo.png'
-import MilesLogo from '../../../public/jordan-logos/MilesLogo.png'
-import SolesLogo from '../../../public/jordan-logos/SolesLogo.png'
-import SamirLogo from '../../../public/jordan-logos/SamirLogo.png'
-import CozmoLogo from '../../../public/jordan-logos/CozmoLogo.png'
-import IrfanLogo from '../../../public/jordan-logos/IrfanLogo.png'
+import UAEFull from '../../../../public/UAE-Full.png'
+import AmazonLogo from '../../../../public/uae-logos/AmazonLogo.png'
+import FirstcryLogo from '../../../../public/uae-logos/FirstCryLogo.png'
+import CarrefourLogo from '../../../../public/uae-logos/CarrefourLogo.png'
+import SimplyKitchenLogo from '../../../../public/uae-logos/SimplyKitchen.png'
+import AlmakaanLogo from '../../../../public/uae-logos/AlmakaanLogo.png'
 
 
+const inter = Inter({ subsets: ['latin'] })
 
 const locationList = [
   {
-    name: 'Whole and All',
-    url: 'https://www.wholeandall.com/collections/contigo',
-    logo: WALogo
+    name: 'Almakaan Store',
+    url: 'https://almakaanstore.com/',
+    logo: AlmakaanLogo
   },
   {
-    name: 'DNA',
-    url: 'https://www.dna.jo/collections/contigo',
-    logo: DNALogo
+    name: 'Amazon UAE',
+    url: 'https://www.amazon.ae/s?k=Contigo',
+    logo: AmazonLogo
   },
   {
-    name: 'The Outfit',
-    url: 'https://theoutfit.me/brand/649-contigo',
-    logo: TheOutfitLogo
+    name: 'Firstcry',
+    url: 'https://www.firstcry.ae/contigo/0/0/1002586',
+    logo: FirstcryLogo
   },
   {
-    name: 'Dumyah',
-    url: 'https://www.dumyah.com/en/contigo',
-    logo: DumyaLogo
+    name: 'Carrefour UAE',
+    url: 'https://www.carrefouruae.com/mafuae/en/c/MKP-Contigo',
+    logo: CarrefourLogo
   },
   {
-    name: 'Abdeen Grand Stores',
-    url: 'https://abdeencenter.com/catalogsearch/result/?q=Contigo',
-    logo: AbdeenLogo
+    name: 'Simply Kitchen',
+    url: 'https://www.liwastores.com/simply-kitchen/',
+    logo: SimplyKitchenLogo
   },
-  {
-    name: 'Carrefour Jordan',
-    url: 'https://www.carrefourjordan.com/mafjor/en/v4/search?keyword=Contigo',
-    logo: CarrefourJordanLogo
-  },
-  {
-    name: 'Soles Stole My Sole',
-    url: 'https://solesstolemysoul.com/collections/contigo',
-    logo: SolesLogo
-  },
-  {
-    name: 'Miles Supermarket',
-    url: null,
-    logo: MilesLogo
-  },
-  {
-    name: 'Samir & Ghasan',
-    url: null,
-    logo: SamirLogo
-  },
-  {
-    name: 'Cozmo Supermarket',
-    url: null,
-    logo: CozmoLogo
-  },
-  {
-    name: 'Irfan',
-    url: null,
-    logo: IrfanLogo
-  },
-
 ]
+
 export const metadata = {
-  title: "Jordan",
+  title: "UAE",
 }
 
-export default function Jordan() {
+
+export default function UAE() {
   return (
     <div>
       <div className="w-full bg-white h-24 bg-no-repeat shadow-xl md:shadow-lg md:rounded-md scale-[1.015] flex flex-row justify-between overflow-clip pr-4 items-center mb-4">
@@ -86,7 +52,7 @@ export default function Jordan() {
         </div>
         </a>
         <div className="w-full justify-center items-center flex">
-          <h1 className="text-2xl">Jordan Retailers</h1>
+          <h1 className="text-2xl">UAE Retailers</h1>
         </div>
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-4 pb-6'>
@@ -104,7 +70,7 @@ export default function Jordan() {
                   height: 'auto',
                 }}
                 className="mx-auto lg:mx-0 mb-4" />
-              <h1 className="text-xl">{location.name}</h1>
+              <h1 className="text-xl text-[#231f20]">{location.name}</h1>
 
             </div>
             {location.url != null ?

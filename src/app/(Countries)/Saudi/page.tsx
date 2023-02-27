@@ -1,71 +1,28 @@
 import Image from 'next/image'
-import QatarFull from '../../../public/Qatar-Full.png'
-import TalabatLogo from '../../../public/qatar-logos/TalabatLogo.png'
-import SnoonuLogo from '../../../public/qatar-logos/SnoonuLogo.png'
-import LzhibaLogo from '../../../public/qatar-logos/LzhbaLogo.png'
-import MonoprixLogo from '../../../public/qatar-logos/MonoprixLogo.png'
-import AlmeeraLogo from '../../../public/qatar-logos/AlmeeraLogo.png'
-import MasskarLogo from '../../../public/qatar-logos/MasskarLogo.png'
-import CarrefourQatarLogo from '../../../public/qatar-logos/CarrefourLogo.png'
-import LuluLogo from '../../../public/qatar-logos/LuLuLogo.png'
-import SportsCornerLogo from '../../../public/qatar-logos/SportsCornerLogo.png'
 
+import AmazonLogo from '../../../../public/saudi-logos/AmazonLogo.png'
+import JarirLogo from '../../../../public/saudi-logos/Jarir-Logo.png'
 
 const locationList = [
   {
-    name: 'Talabat Qatar',
-    url: 'https://www.talabat.com/qatar/grocery/619614/talabat-mart?aid=1634',
-    logo: TalabatLogo
+    name: 'Jarir Bookstore',
+    url: 'https://www.jarir.com/sa-en/catalogsearch/result?search=Contigo',
+    logo: JarirLogo
   },
   {
-    name: 'Snoonu',
-    url: 'https://snoonu.com/search?q=Contigo',
-    logo: SnoonuLogo
-  },
-  {
-    name: 'Lzhiba',
-    url: 'https://www.lzhiba.qa/product-brands/contigo/',
-    logo: LzhibaLogo
+    name: 'Amazon',
+    url: 'https://www.amazon.sa/-/en/Contigo/b/ref=bl_dp_s_web_20234293031?ie=UTF8&node=20234293031&field-lbr_brands_browse-bin=Contigo',
+    logo: AmazonLogo
   }
-  ,
-  {
-    name: 'Carrefour Qatar',
-    url: 'https://www.carrefourqatar.com/mafqat/en/v4/search?keyword=Contigo',
-    logo: CarrefourQatarLogo
-  },
-  {
-    name: 'Monoprix',
-    url: null,
-    logo: MonoprixLogo
-  },
-  {
-    name: 'Almeera',
-    url: null,
-    logo: AlmeeraLogo
-  },
-  {
-    name: 'Masskar',
-    url: null,
-    logo: MasskarLogo
-  },
-  {
-    name: 'Lulu Hypermarket',
-    url: null,
-    logo: LuluLogo
-  },
-  {
-    name: 'Sports Corner',
-    url: null,
-    logo: SportsCornerLogo
-  }
+
 ]
 
 export const metadata = {
-  title: "Qatar",
+  title: "Saudi Arabia",
 }
 
 
-export default function Qatar() {
+export default function Saudi() {
   return (
     <div>
       <div className="w-full bg-white h-24 bg-no-repeat shadow-xl md:shadow-lg md:rounded-md scale-[1.015] flex flex-row justify-between overflow-clip pr-4 items-center mb-4">
@@ -74,12 +31,12 @@ export default function Qatar() {
         </div>
         </a>
         <div className="w-full justify-center items-center flex">
-          <h1 className="text-2xl">Qatar Retailers</h1>
+          <h1 className="text-2xl">Saudi Retailers</h1>
         </div>
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-4 pb-6'>
 
-        {locationList.map((location,index) => (
+        {locationList.map((location, index) => (
           <div key={index} className="shadow-lg bg-white rounded-md text-center flex flex-col justify-center items-center overflow-clip md:hover:shadow-2xl md:hover:-translate-y-0.5 md:hover:scale-[1.01] transition-all ease-in-out">
             <div className="py-4">
               <Image
@@ -92,7 +49,7 @@ export default function Qatar() {
                   height: 'auto',
                 }}
                 className="mx-auto lg:mx-0 mb-4" />
-              <h1 className="text-xl text-[#231f20]">{location.name}</h1>
+              <h1 className="text-xl">{location.name}</h1>
 
             </div>
             {location.url != null ?
@@ -103,6 +60,5 @@ export default function Qatar() {
       </div>
 
     </div>
-
   )
 }

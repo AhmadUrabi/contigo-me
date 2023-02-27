@@ -1,28 +1,83 @@
 import Image from 'next/image'
+import { Inter } from '@next/font/google'
+import JordanFull from '../../../../public/Jordan-Full.png'
+import WALogo from '../../../../public/jordan-logos/WALogo.png'
+import DNALogo from '../../../../public/jordan-logos/DNALogo.png'
+import TheOutfitLogo from '../../../../public/jordan-logos/TheOutFitLogo.png'
+import DumyaLogo from '../../../../public/jordan-logos/DumyahLogo.png'
+import AbdeenLogo from '../../../../public/jordan-logos/AbdeenLogo.png'
+import CarrefourJordanLogo from '../../../../public/jordan-logos/CarrefourLogo.png'
+import MilesLogo from '../../../../public/jordan-logos/MilesLogo.png'
+import SolesLogo from '../../../../public/jordan-logos/SolesLogo.png'
+import SamirLogo from '../../../../public/jordan-logos/SamirLogo.png'
+import CozmoLogo from '../../../../public/jordan-logos/CozmoLogo.png'
+import IrfanLogo from '../../../../public/jordan-logos/IrfanLogo.png'
 
-import AmazonLogo from '../../../public/saudi-logos/AmazonLogo.png'
-import JarirLogo from '../../../public/saudi-logos/Jarir-Logo.png'
+
 
 const locationList = [
   {
-    name: 'Jarir Bookstore',
-    url: 'https://www.jarir.com/sa-en/catalogsearch/result?search=Contigo',
-    logo: JarirLogo
+    name: 'Whole and All',
+    url: 'https://www.wholeandall.com/collections/contigo',
+    logo: WALogo
   },
   {
-    name: 'Amazon',
-    url: 'https://www.amazon.sa/-/en/Contigo/b/ref=bl_dp_s_web_20234293031?ie=UTF8&node=20234293031&field-lbr_brands_browse-bin=Contigo',
-    logo: AmazonLogo
-  }
+    name: 'DNA',
+    url: 'https://www.dna.jo/collections/contigo',
+    logo: DNALogo
+  },
+  {
+    name: 'The Outfit',
+    url: 'https://theoutfit.me/brand/649-contigo',
+    logo: TheOutfitLogo
+  },
+  {
+    name: 'Dumyah',
+    url: 'https://www.dumyah.com/en/contigo',
+    logo: DumyaLogo
+  },
+  {
+    name: 'Abdeen Grand Stores',
+    url: 'https://abdeencenter.com/catalogsearch/result/?q=Contigo',
+    logo: AbdeenLogo
+  },
+  {
+    name: 'Carrefour Jordan',
+    url: 'https://www.carrefourjordan.com/mafjor/en/v4/search?keyword=Contigo',
+    logo: CarrefourJordanLogo
+  },
+  {
+    name: 'Soles Stole My Sole',
+    url: 'https://solesstolemysoul.com/collections/contigo',
+    logo: SolesLogo
+  },
+  {
+    name: 'Miles Supermarket',
+    url: null,
+    logo: MilesLogo
+  },
+  {
+    name: 'Samir & Ghasan',
+    url: null,
+    logo: SamirLogo
+  },
+  {
+    name: 'Cozmo Supermarket',
+    url: null,
+    logo: CozmoLogo
+  },
+  {
+    name: 'Irfan',
+    url: null,
+    logo: IrfanLogo
+  },
 
 ]
-
 export const metadata = {
-  title: "Saudi Arabia",
+  title: "Jordan",
 }
 
-
-export default function Saudi() {
+export default function Jordan() {
   return (
     <div>
       <div className="w-full bg-white h-24 bg-no-repeat shadow-xl md:shadow-lg md:rounded-md scale-[1.015] flex flex-row justify-between overflow-clip pr-4 items-center mb-4">
@@ -31,7 +86,7 @@ export default function Saudi() {
         </div>
         </a>
         <div className="w-full justify-center items-center flex">
-          <h1 className="text-2xl">Saudi Retailers</h1>
+          <h1 className="text-2xl">Jordan Retailers</h1>
         </div>
       </div>
       <div className='grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 auto-cols-max px-4 pb-6'>
