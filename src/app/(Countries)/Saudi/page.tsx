@@ -5,11 +5,6 @@ import JarirLogo from '../../../../public/saudi-logos/Jarir-Logo.png'
 
 const locationList = [
   {
-    name: 'Jarir Bookstore',
-    url: 'https://www.jarir.com/sa-en/catalogsearch/result?search=Contigo',
-    logo: JarirLogo
-  },
-  {
     name: 'Amazon',
     url: 'https://www.amazon.sa/-/en/Contigo/b/ref=bl_dp_s_web_20234293031?ie=UTF8&node=20234293031&field-lbr_brands_browse-bin=Contigo',
     logo: AmazonLogo
